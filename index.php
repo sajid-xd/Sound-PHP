@@ -1,86 +1,12 @@
 <?php
-session_start();
-$isLoggedIn = isset($_SESSION['username']);
+
+$home='class="active"';
+
+
+$songs='';
+
 ?>
-
-<!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="DJoz Template">
-    <meta name="keywords" content="DJoz, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SOUND</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="css/nowfont.css" type="text/css">
-    <link rel="stylesheet" href="css/rockville.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2">
-                    <div class="header__logo">
-                        <a href="./index.php"><img src="img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10">
-                    <div class="header__nav">
-                        <nav class="header__menu mobile-menu">
-                            <ul>
-                                <li class="active"><a href="./index.php">Home</a></li>
-                                <li><a href="./about.php">About</a></li>
-                                <li><a href="./discography.php">Discography</a></li>
-                                <li><a href="./tours.php">Tours</a></li>
-                                <li><a href="./videos.php">Videos</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./about.php">About</a></li>
-                                        <li><a href="./blog.php">Blog</a></li>
-                                        <li><a href="./blog-details.php">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./contact.php">Contact</a></li>
-            <?php if ($isLoggedIn): ?>
-                <li>
-                    <form method="post" action="logout.php">
-                        <a href=""><button type="submit" name="logout" style="border:none;background:none;color:inherit;padding:0;cursor:pointer;">
-                            LOGOUT
-                        </button></a>
-                    </form>
-                </li>
-            <?php else: ?>
-                <li><a href="./login.php">Login</a></li>
-            <?php endif; ?>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
-    <!-- Header Section End -->
+<?php include "nav.php";?>
 
     <!-- Hero Section Begin -->
     <section class="hero spad set-bg" data-setbg="img/hero-bg.png">
@@ -103,7 +29,10 @@ $isLoggedIn = isset($_SESSION['username']);
     </section>
     <!-- Hero Section End -->
 
-    <!-- Event Section Begin -->
+    
+
+<?php if ($isLoggedIn){?>
+<!-- Event Section Begin -->
     <section class="event spad">
         <div class="container">
             <div class="row">
@@ -119,7 +48,7 @@ $isLoggedIn = isset($_SESSION['username']);
                         <div class="event__item">
                             <div class="event__item__pic set-bg" data-setbg="img/events/event-1.jpg">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Nov 15, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
@@ -132,7 +61,7 @@ $isLoggedIn = isset($_SESSION['username']);
                         <div class="event__item">
                             <div class="event__item__pic set-bg" data-setbg="img/events/event-2.jpg">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Nov 15, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
@@ -145,7 +74,7 @@ $isLoggedIn = isset($_SESSION['username']);
                         <div class="event__item">
                             <div class="event__item__pic set-bg" data-setbg="img/events/event-3.jpg">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Nov 15, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
@@ -158,7 +87,7 @@ $isLoggedIn = isset($_SESSION['username']);
                         <div class="event__item">
                             <div class="event__item__pic set-bg" data-setbg="img/events/event-2.jpg">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Nov 15, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
@@ -205,7 +134,7 @@ $isLoggedIn = isset($_SESSION['username']);
             <div class="row">
                 <div class="col-lg-6 p-0">
                     <div class="services__left set-bg" data-setbg="img/services/service-left.jpg">
-                        <a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <a href="https://www.youtube.com/watch?v=WA1vnOAIpNQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -539,7 +468,7 @@ $isLoggedIn = isset($_SESSION['username']);
             <div class="row">
                 <div class="col-lg-12">
                     <div class="countdown__text">
-                        <h1>Tomorrowland 2020</h1>
+                        <h1>Tomorrowland 2024</h1>
                         <h4>Music festival start in</h4>
                     </div>
                     <div class="countdown__timer" id="countdown-time">
@@ -568,71 +497,7 @@ $isLoggedIn = isset($_SESSION['username']);
         </div>
     </section>
     <!-- Countdown Section End -->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer spad set-bg" data-setbg="img/footer-bg.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer__address">
-                        <ul>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                <p>Phone</p>
-                                <h6>1-677-124-44227</h6>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope"></i>
-                                <p>Email</p>
-                                <h6>DJ.Music@gmail.com</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1 col-md-6">
-                    <div class="footer__social">
-                        <h2>DJoz</h2>
-                        <div class="footer__social__links">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 offset-lg-1 col-md-6">
-                    <div class="footer__newslatter">
-                        <h4>Stay With me</h4>
-                        <form action="#">
-                            <input type="text" placeholder="Email">
-                            <button type="submit"><i class="fa fa-send-o"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			<div class="footer__copyright__text">
-				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-			</div>
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </div>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- Music Plugin -->
-    <script src="js/jquery.jplayer.min.js"></script>
-    <script src="js/jplayerInit.js"></script>
-</body>
-
-</html>
+    <?php }else{?>
+        </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+        <?php }?>
+    <?php include "foot.php";?>

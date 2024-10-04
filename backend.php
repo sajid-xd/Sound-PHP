@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
 
-    $qu2 = mysqli_query($con, "SELECT * FROM users WHERE username = '$username' AND usertype = 2");
+    $qu2 = mysqli_query($con, "SELECT * FROM users WHERE username = '$username'");
 
     if (mysqli_num_rows($qu2) > 0) {
         $user = mysqli_fetch_assoc($qu2);
@@ -33,8 +33,15 @@ if (isset($_POST['login'])) {
         if ($user['password'] === $password) {
             $_SESSION['username'] = $user['username'];
             $_SESSION['usertype'] = $user['usertype'];
+       // die(json_encode($user));
+if($_SESSION['usertype']== "1"){
 
-            header('Location: index.php');
+    header('Location: admin');
+}else{
+
+    header('Location: index.php');
+}
+        
             exit();
         } else {
             $_SESSION['error'] = "Oops! Incorrect password!";

@@ -1,3 +1,8 @@
+<?php
+session_start();
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,12 +59,7 @@
                                 <label for="password" class="form-label">Password</label>
                                 <input class="form-control" type="password" required id="password" placeholder="Enter your password" name="password">
                             </div>
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="checkbox-signup" required>
-                                    <label class="form-check-label" for="checkbox-signup">I accept <a href="javascript: void(0);" class="text-muted">Terms and Conditions</a></label>
-                                </div>
-                            </div>
+                            
                             <div class="mb-0 d-grid text-center">
                                 <button class="btn btn-primary" type="submit" name="submit"><i class="mdi mdi-account-circle"></i> Sign Up </button>
                             </div>

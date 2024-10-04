@@ -50,19 +50,27 @@ include "backend.php";
                                 <input class="form-control" type="text" id="emailaddress" required="" placeholder="Enter your user name" name="username">
                             </div>
                             <div class="mb-3">
-                                <a href="pages-recoverpw-2.html" class="text-muted float-end"><small>Forgot your password?</small></a>
+                             
                                 <label for="password" class="form-label">Password</label>
                                 <input class="form-control" type="password" required="" id="password" placeholder="Enter your password" name="password">
                             </div>
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="checkbox-signin" require>
-                                    <label class="form-check-label" for="checkbox-signin">Remember me</label>
-                                </div>
-                            </div>
                             <div class="d-grid mb-0 text-center">
-                                <button class="btn btn-primary" type="submit" name="login"><i class="mdi mdi-login"></i> Log In </button>
-                            </div>
+    <button class="btn btn-primary" type="submit" name="login"><i class="mdi mdi-login"></i> Log In </button>
+</div>
+
+<?php
+if(isset($_SESSION['error'])){
+?>
+    <br>
+    <div class="alert alert-danger text-center" role="alert">
+        <?=  $_SESSION['error']?>
+    </div>
+<?php
+}
+?>
+</br>
+<div class="mb-3" bis_skin_checked="1">
+<a href="index.php" class="text" bis_skin_checked="1">Go back to main page.</a>                     </div>
                         </form>
                         <!-- end form-->
 
@@ -79,11 +87,11 @@ include "backend.php";
             <!-- Auth fluid right content -->
             <div class="auth-fluid-right text-center">
                 <div class="auth-user-testimonial">
-                    <h2 class="mb-3">I love the color!</h2>
+                    <h2 class="mb-3">Wellcome To SOUND!</h2>
                     <p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
                     </p>
                     <p>
-                        - Hyper Admin User
+                        - Sound User
                     </p>
                 </div> <!-- end auth-user-testimonial-->
             </div>
