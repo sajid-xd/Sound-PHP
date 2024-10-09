@@ -51,7 +51,7 @@ $years = mysqli_query($con, "SELECT * FROM years");
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
-                <h4 class="page-title">CRUD Operations for Artists, Albums, Users, and Years</h4>
+                <h4 class="page-title">Add Data : Artists, Albums, Users, and Years</h4>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ $songs='';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__text">
-                        <span>New single</span>
+                        <span>New Sound</span>
                         <h1>Feel the heart beats</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />tempor
                             incididunt ut labore et dolore magna aliqua.</p>
@@ -28,152 +28,76 @@ $songs='';
         </div>
     </section>
     <!-- Hero Section End -->
-
     
-
-<?php if ($isLoggedIn){?>
-<!-- Event Section Begin -->
-    <section class="event spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Upcoming Events</h2>
+    
+    
+    <?php if ($isLoggedIn){?>
+        <!-- Event Section Begin -->
+            <section class="event spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2>Trading Artist</h2>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="event__slider owl-carousel">
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="img/events/event-1.jpg">
-                                <div class="tag-date">
-                                    <span>Nov 15, 2024</span>
+                    <div class="row">
+                        <div class="event__slider owl-carousel">
+                            <div class="col-lg-4">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/1.jpg">
+                                        <div class="tag-date">
+                                            <a href="#"><span>Nov 15, 2024</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Atif Aslam</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="img/events/event-2.jpg">
-                                <div class="tag-date">
-                                    <span>Nov 15, 2024</span>
+                            <div class="col-lg-4">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/2.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Asim Azhar</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="img/events/event-3.jpg">
-                                <div class="tag-date">
-                                    <span>Nov 15, 2024</span>
+                            <div class="col-lg-4">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/3.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talha Anjum</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="img/events/event-2.jpg">
-                                <div class="tag-date">
-                                    <span>Nov 15, 2024</span>
+                            <div class="col-lg-4">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talhah Yunus</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Event Section End -->
-
-    <!-- About Section Begin -->
-    <section class="about spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about__pic">
-                        <img src="img/about/about.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about__text">
-                        <div class="section-title">
-                            <h2>DJ Alexandra Rud</h2>
-                            <h1>About me</h1>
-                        </div>
-                        <p>DJ Rainflow knows how to move your mind, body and soul by delivering tracks that stand out
-                            from the norm. As if this impressive succession of high impact, floor-filling bombs wasn’t
-                            enough to sustain.</p>
-                        <a href="#" class="primary-btn">CONTACT ME</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Services Section Begin -->
-    <section class="services">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="services__left set-bg" data-setbg="img/services/service-left.jpg">
-                        <a href="https://www.youtube.com/watch?v=WA1vnOAIpNQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="row services__list">
-                        <div class="col-lg-6 p-0 order-lg-1 col-md-6 order-md-1">
-                            <div class="service__item deep-bg">
-                                <img src="img/services/service-1.png" alt="">
-                                <h4>Wedding</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2">
-                            <div class="service__item">
-                                <img src="img/services/service-2.png" alt="">
-                                <h4>Clubs and bar</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-4 col-md-6 order-md-4">
-                            <div class="service__item deep-bg">
-                                <img src="img/services/service-4.png" alt="">
-                                <h4>DJ lessons</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-3 col-md-6 order-md-3">
-                            <div class="service__item">
-                                <img src="img/services/service-3.png" alt="">
-                                <h4>Corporate events</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
-
+            </section>
+            <!-- Event Section End -->
+        
     <!-- Track Section Begin -->
     <section class="track spad">
         <div class="container">
@@ -415,6 +339,134 @@ $songs='';
     </section>
     <!-- Track Section End -->
 
+<!-- Most Listening -->
+            <section class="event spad">
+                <div class="container">
+                <div class="row">
+                       <div class="col-lg-12">
+                       <div class="section-title">
+                        <h2>Most Listening</h2>
+                        <h1>Relaxing</h1>
+                    </div>
+                    <div class="row mt-5">
+                        
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/1.jpg">
+                                        <div class="tag-date">
+                                            <a href="#"><span>Nov 15, 2024</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Atif Aslam</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/2.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Asim Azhar</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/3.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talha Anjum</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talhah Yunus</h4>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Most Listening End -->
+
+            <!-- 2024 Trending -->
+            <section class="event spad">
+                <div class="container">
+                <div class="row">
+                       <div class="col-lg-12">
+                       <div class="section-title">
+                        <h2>2024 Trending Songs</h2>
+                        <h1>Sound</h1>
+                    </div>
+                    <div class="row mt-5">
+                        
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/1.jpg">
+                                        <div class="tag-date">
+                                            <a href="#"><span>Nov 15, 2024</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Atif Aslam</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/2.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Asim Azhar</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/3.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talha Anjum</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
+                                        <div class="tag-date">
+                                            <span>Nov 15, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talhah Yunus</h4>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 2024 Trending End -->
+
     <!-- Youtube Section Begin -->
     <section class="youtube spad">
         <div class="container">
@@ -429,31 +481,31 @@ $songs='';
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/youtube-1.jpg">
-                            <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/1.jpg">
+                            <a href="https://www.youtube.com/watch?v=5eu6GtxMfkQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                            <h4>Aadat [slowed + reverbed] | Atif Aslam</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/youtube-2.jpg">
-                            <a href="https://www.youtube.com/watch?v=K4DyBUG242c?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/2.jpg">
+                            <a href="https://www.youtube.com/watch?v=hq2mmXIc7GQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>Martin Garrix (Full live-set) | SLAM!Koningsdag</h4>
+                            <h4>Bematlab (Official Video) Asim Azhar ft. Talha Anjum | BEMATLAB</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/youtube-3.jpg">
-                            <a href="https://www.youtube.com/watch?v=S19UcWdOA-I?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/3.jpg">
+                            <a href="https://www.youtube.com/watch?v=jIQ0Dx-4peE" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>Dimitri Vegas, Steve Aoki & Like Mike’s “3 Are Legend”</h4>
+                            <h4>GUMAAN - Young Stunners | Talha Anjum | Talhah Yunus</h4>
                         </div>
                     </div>
                 </div>
@@ -468,8 +520,8 @@ $songs='';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="countdown__text">
-                        <h1>Tomorrowland 2024</h1>
-                        <h4>Music festival start in</h4>
+                        <h1>ParkView City 2024</h1>
+                        <h4>Young Stunners Concert</h4>
                     </div>
                     <div class="countdown__timer" id="countdown-time">
                         <div class="countdown__item">
