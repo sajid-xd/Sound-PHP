@@ -48,7 +48,7 @@ if($_SESSION['usertype']!="1"){
                         <img src="../assets/images/1.png" alt="" height="60">
                     </span>
                     <span class="logo-sm">
-                        <img src="../assets/images/logo_sm.png" alt="" height="16">
+                        <img src="../assets/images/logo_smm.png" alt="" height="30">
                     </span>
                 </a>
 
@@ -80,7 +80,7 @@ if($_SESSION['usertype']!="1"){
              
                         <li class="side-nav-item">
                             <a  class="side-nav-link" href="songs.php">
-                                <i class="uil-home-alt"></i>
+                                <i class="uil-music"></i>
                                 <span> Songs </span>
                             </a>
                            

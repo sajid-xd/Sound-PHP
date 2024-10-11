@@ -16,8 +16,8 @@ $songs='';
                     <div class="hero__text">
                         <span>New Sound</span>
                         <h1>Feel the heart beats</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />tempor
-                            incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Discover the latest hits, trending artists, and immersive music experiences <br/>
+                        that will make your heart beat to the rhythm. Explore 2024's top trending tracks.</p>
                         <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                     </div>
                 </div>
