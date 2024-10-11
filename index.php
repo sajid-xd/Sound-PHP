@@ -82,18 +82,6 @@ $songs='';
                             </div>
                             <div class="col-lg-4">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
-                                        <div class="tag-date">
-                                        <a href="#"><span>View More</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="event__item__text">
-                                        <h4>Talhah Yunus</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="event__item">
                                     <div class="event__item__pic set-bg" data-setbg="img/events/5.jpg">
                                         <div class="tag-date">
                                             <a href="#"><span>View More</span></a>
@@ -101,6 +89,18 @@ $songs='';
                                     </div>
                                     <div class="event__item__text">
                                         <h4>Kaifi Khalil</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
+                                        <div class="tag-date">
+                                        <a href="#"><span>View More</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Talhah Yunus</h4>
                                     </div>
                                 </div>
                             </div>
@@ -136,13 +136,13 @@ $songs='';
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/most_listening/2.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/most_listening/2.jpeg">
                                         <div class="tag-date">
                                             <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Rergets</h4>
+                                        <h4>Jurmana</h4>
                                     </div>
                                 </div>
                             </div>
@@ -314,7 +314,7 @@ $songs='';
                         </div>
                     </div>
                     <div class="buy__tickets">
-                        <a href="#" class="primary-btn">Buy tickets</a>
+                    <span class="primary-btn">Enjoy Sound</span>
                     </div>
                 </div>
             </div>
