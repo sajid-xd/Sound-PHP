@@ -92,6 +92,18 @@ $songs='';
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-4">
+                                <div class="event__item">
+                                    <div class="event__item__pic set-bg" data-setbg="img/events/5.jpg">
+                                        <div class="tag-date">
+                                            <a href="#"><span>View More</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="event__item__text">
+                                        <h4>Kaifi Khalil</h4>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,49 +124,49 @@ $songs='';
                         
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/1.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/most_listening/1.jpeg">
                                         <div class="tag-date">
-                                            <a href="#"><span>Nov 15, 2024</span></a>
+                                            <a href="#"><span>Play Now</span></a>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Atif Aslam</h4>
+                                        <h4>Bematlab</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/2.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/most_listening/2.jpg">
                                         <div class="tag-date">
-                                            <span>Nov 15, 2024</span>
+                                            <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Asim Azhar</h4>
+                                        <h4>Rergets</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/3.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/most_listening/3.jpeg">
                                         <div class="tag-date">
-                                            <span>Nov 15, 2024</span>
+                                            <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Talha Anjum</h4>
+                                        <h4>Yaad</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/most_listening/4.jpeg">
                                         <div class="tag-date">
-                                            <span>Nov 15, 2024</span>
+                                            <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Talhah Yunus</h4>
+                                        <h4>Aadat</h4>
                                     </div>
                             </div>
                         </div>
@@ -176,49 +188,49 @@ $songs='';
                         
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/1.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/2024_trending/1.jpeg">
                                         <div class="tag-date">
-                                            <a href="#"><span>Nov 15, 2024</span></a>
+                                            <a href="#"><span>Play Now</span></a>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Atif Aslam</h4>
+                                        <h4>Kahani Suno</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/2.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/2024_trending/2.jpeg">
                                         <div class="tag-date">
-                                            <span>Nov 15, 2024</span>
+                                            <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Asim Azhar</h4>
+                                        <h4>Pasoori</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/3.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/2024_trending/3.jpeg">
                                         <div class="tag-date">
-                                            <span>Nov 15, 2024</span>
+                                            <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Talha Anjum</h4>
+                                        <h4>Jhol</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="event__item">
-                                    <div class="event__item__pic set-bg" data-setbg="img/events/4.jpg">
+                                    <div class="event__item__pic set-bg" data-setbg="img/2024_trending/4.jpeg">
                                         <div class="tag-date">
-                                            <span>Nov 15, 2024</span>
+                                            <span>Play Now</span>
                                         </div>
                                     </div>
                                     <div class="event__item__text">
-                                        <h4>Talhah Yunus</h4>
+                                        <h4>Therapy</h4>
                                     </div>
                             </div>
                         </div>
@@ -245,7 +257,7 @@ $songs='';
                             <a href="https://www.youtube.com/watch?v=5eu6GtxMfkQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>Aadat [slowed + reverbed] | Atif Aslam</h4>
+                            <h4>Aadat By (Atif Aslam)</h4>
                         </div>
                     </div>
                 </div>
@@ -255,7 +267,7 @@ $songs='';
                             <a href="https://www.youtube.com/watch?v=hq2mmXIc7GQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>Bematlab (Official Video) Asim Azhar ft. Talha Anjum | BEMATLAB</h4>
+                            <h4>Bematlab By (Asim Azhar)</h4>
                         </div>
                     </div>
                 </div>
@@ -265,7 +277,7 @@ $songs='';
                             <a href="https://www.youtube.com/watch?v=jIQ0Dx-4peE" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>GUMAAN - Young Stunners | Talha Anjum | Talhah Yunus</h4>
+                            <h4>GUMAAN By (Talha Anjum)</h4>
                         </div>
                     </div>
                 </div>
