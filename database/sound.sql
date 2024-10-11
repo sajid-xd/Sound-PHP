@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2024 at 07:08 AM
+-- Generation Time: Oct 11, 2024 at 05:40 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,9 +37,12 @@ CREATE TABLE `albums` (
 --
 
 INSERT INTO `albums` (`id`, `name`) VALUES
-(10, 'comaback'),
-(11, 'Sajid Ali'),
-(12, 'dil lagi');
+(1, 'Best Of Atif Aslam'),
+(2, 'Open Letter - Talha Anjum'),
+(3, 'Asim Azhar Music'),
+(4, 'Rockstar Without A Guitar - UMAIR'),
+(5, 'Mix - AP Dhillon'),
+(6, 'Best Of Arijit Singh');
 
 -- --------------------------------------------------------
 
@@ -57,7 +60,12 @@ CREATE TABLE `artist` (
 --
 
 INSERT INTO `artist` (`id`, `name`) VALUES
-(7, 'Talha Paji');
+(1, 'Atif Aslam'),
+(2, 'Asim Azhar'),
+(3, 'Talha Anjum'),
+(4, 'Umair'),
+(5, 'AP Dhillon'),
+(6, 'Arijit Singh');
 
 -- --------------------------------------------------------
 
@@ -81,8 +89,7 @@ CREATE TABLE `music` (
 --
 
 INSERT INTO `music` (`id`, `name`, `YEAR`, `ARTIST`, `ALBUM`, `isaudio`, `icon`, `soucre`) VALUES
-(1, 'AFSANAY - Young Stunners _ Talhah Yunus _ Talha Anjum _ Prod. By Jokhay (Official Music Video) (1080p, h264, youtube).mp4', 2020, 7, 12, 0, 'IMG-20240729-WA0021.png', 'AFSANAY - Young Stunners _ Talhah Yunus _ Talha Anjum _ Prod. By Jokhay (Official Music Video) (1080p, h264, youtube).mp4'),
-(2, '1.mp3', 2020, 7, 10, 1, 'as-icon-2.png', '1.mp3');
+(1, 'Y2meta.app - Aadat [slowed + reverbed] _ Atif Aslam _ Kalyug(2005) _ full song (128 kbps).mp3', 2020, 1, 1, 1, 'Aadat.jpg', 'Y2meta.app - Aadat [slowed + reverbed] _ Atif Aslam _ Kalyug(2005) _ full song (128 kbps).mp3');
 
 -- --------------------------------------------------------
 
@@ -103,7 +110,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `usertype`, `password`) VALUES
-(1, 'admin', 'admin', 1, 'admin'),
+(1, 'Sajid', 'admin', 1, 'admin'),
 (2, 'asdf', 'asf', 2, 'ascf'),
 (3, 'faws', 'asc', 2, 'wdxasc'),
 (4, 'test', 'test', 2, 'test');
@@ -198,19 +205,19 @@ ALTER TABLE `years`
 -- AUTO_INCREMENT for table `albums`
 --
 ALTER TABLE `albums`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `artist`
 --
 ALTER TABLE `artist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
