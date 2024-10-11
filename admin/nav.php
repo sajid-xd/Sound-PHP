@@ -14,12 +14,12 @@ if($_SESSION['usertype']!="1"){
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Datatables | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Sound Admin-Panel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/fav-icon.ico">
 
         <!-- third party css -->
         <link href="../assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css" />
@@ -45,7 +45,7 @@ if($_SESSION['usertype']!="1"){
                 <!-- LOGO -->
                 <a href="index.html" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <img src="../assets/images/logo.png" alt="" height="16">
+                        <img src="../assets/images/1.png" alt="" height="60">
                     </span>
                     <span class="logo-sm">
                         <img src="../assets/images/logo_sm.png" alt="" height="16">
@@ -112,7 +112,7 @@ if($_SESSION['usertype']!="1"){
                                         <img src="../assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                     </span>
                                     <span>
-                                        <span class="account-user-name">Dominic Keller</span>
+                                        <span class="account-user-name"><?php echo $_SESSION['adminName']?></span>
                                         <span class="account-position">Admin</span>
                                     </span>
                                 </a>

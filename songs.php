@@ -1,8 +1,6 @@
 <?php
 
 $home='';
-
-
 $songs='class="active"';
 
 ?>
@@ -15,7 +13,7 @@ $songs='class="active"';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="#"><i class="fa fa-home"></i> Home</a>
+                        <a href="./index.php"><i class="fa fa-home"></i> Home</a>
                         <span>Discography</span>
                     </div>
                 </div>
@@ -36,6 +34,7 @@ $songs='class="active"';
                 </div>
             </div>
           <?php
+
 // CONNECTION...
 $con = mysqli_connect("localhost", "root", "", "sound");
 
@@ -44,10 +43,8 @@ if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Initialize filter variables
 $filterCondition = "";
 
-// Check for GET parameters and build the filter condition
 if (isset($_GET['year_id'])) {
     $yearId = intval($_GET['year_id']);
     $filterCondition .= " WHERE m.YEAR = $yearId";
@@ -71,7 +68,6 @@ if (isset($_GET['album_id'])) {
     }
 }
 
-// Fetch songs from the database with the filter
 $songsQuery = "SELECT m.id, m.name AS song_name, m.icon, m.soucre, m.isaudio, a.name AS album_name, ar.name AS artist_name, m.YEAR
                FROM music m
                JOIN albums a ON m.ALBUM = a.id
@@ -79,17 +75,16 @@ $songsQuery = "SELECT m.id, m.name AS song_name, m.icon, m.soucre, m.isaudio, a.
                " ORDER BY m.id";
 
 $songsResult = mysqli_query($con, $songsQuery);
-$songCount = mysqli_num_rows($songsResult); // Count the number of songs retrieved
+$songCount = mysqli_num_rows($songsResult);
 ?>
 
 <div class="container">
-    <h2>Total Songs: <?php echo $songCount; ?></h2> <!-- Display the count of songs -->
+    <h2>Total Songs: <?php echo $songCount; ?></h2>
 
     <div class="row">
         <?php
         if ($songCount > 0) {
             while ($song = mysqli_fetch_assoc($songsResult)) {
-                // Determine player type based on isaudio field
                 if ($song['isaudio'] == 1) {
                     $playerHTML = '<audio controls>
                                     <source src="admin/uploads/' . $song['soucre'] . '" type="audio/mpeg">
@@ -126,12 +121,10 @@ $songCount = mysqli_num_rows($songsResult); // Count the number of songs retriev
 </div>
 
 <?php
-// Close the database connection
 mysqli_close($con);
 ?>
 
         </div>
     </section>
-    <!-- Discography Section End -->
     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     <?php include "foot.php";?>

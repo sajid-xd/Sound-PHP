@@ -13,7 +13,7 @@ include "backend.php";
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/fav-icon.ico">
 
         <!-- App css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@ include "backend.php";
                         <!-- Logo -->
                         <div class="auth-brand text-center text-lg-start">
                             <a href="index.html" class="logo-dark">
-                                <span><img src="assets/images/logo-dark.png" alt="" height="18"></span>
+                                <span><img src="assets/images/dark_logo.png" alt="Sound" height="80"></span>
                             </a>
                             <a href="index.html" class="logo-light">
                                 <span><img src="assets/images/logo.png" alt="" height="18"></span>

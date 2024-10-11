@@ -33,6 +33,7 @@ if (isset($_POST['login'])) {
         if ($user['password'] === $password) {
             $_SESSION['username'] = $user['username'];
             $_SESSION['usertype'] = $user['usertype'];
+            $_SESSION['adminName'] = $user['name'];
        // die(json_encode($user));
 if($_SESSION['usertype']== "1"){
 
