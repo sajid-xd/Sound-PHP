@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2024 at 05:40 PM
+-- Generation Time: Oct 14, 2024 at 09:14 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -52,20 +52,33 @@ INSERT INTO `albums` (`id`, `name`) VALUES
 
 CREATE TABLE `artist` (
   `id` int(11) NOT NULL,
-  `name` text NOT NULL
+  `name` text NOT NULL,
+  `artist_img` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `artist`
 --
 
-INSERT INTO `artist` (`id`, `name`) VALUES
-(1, 'Atif Aslam'),
-(2, 'Asim Azhar'),
-(3, 'Talha Anjum'),
-(4, 'Umair'),
-(5, 'AP Dhillon'),
-(6, 'Arijit Singh');
+INSERT INTO `artist` (`id`, `name`, `artist_img`) VALUES
+(1, 'Atif Aslam', 'atif_aslam.jpg'),
+(2, 'Asim Azhar', 'asim_azhar.jpg'),
+(3, 'Talha Anjum', 'talha_anjum.jpg'),
+(4, 'Kaifi Khalil', 'kaifi_khalil.jpg'),
+(5, 'Talhah Yunus', 'talha_yunus.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `most_listening`
+--
+
+CREATE TABLE `most_listening` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `mostlis_img` text DEFAULT NULL,
+  `lis_music` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -89,7 +102,7 @@ CREATE TABLE `music` (
 --
 
 INSERT INTO `music` (`id`, `name`, `YEAR`, `ARTIST`, `ALBUM`, `isaudio`, `icon`, `soucre`) VALUES
-(1, 'Y2meta.app - Aadat [slowed + reverbed] _ Atif Aslam _ Kalyug(2005) _ full song (128 kbps).mp3', 2020, 1, 1, 1, 'Aadat.jpg', 'Y2meta.app - Aadat [slowed + reverbed] _ Atif Aslam _ Kalyug(2005) _ full song (128 kbps).mp3');
+(1, '1.mp3', 2020, 1, 1, 1, 'aadat.jpg', '1.mp3');
 
 -- --------------------------------------------------------
 
@@ -173,6 +186,12 @@ ALTER TABLE `artist`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `most_listening`
+--
+ALTER TABLE `most_listening`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `music`
 --
 ALTER TABLE `music`
@@ -212,6 +231,12 @@ ALTER TABLE `albums`
 --
 ALTER TABLE `artist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `most_listening`
+--
+ALTER TABLE `most_listening`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `music`
