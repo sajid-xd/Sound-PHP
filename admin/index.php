@@ -85,6 +85,7 @@ $years = mysqli_query($con, "SELECT * FROM years");
                 <input type="hidden" name="id" id="artist_id" value="0">
                 <div class="input-group mb-3">
                     <input type="text" name="name" class="form-control" placeholder="Artist Name" required>
+                    <input type="text" class="form-control" onclick="this.type='file'" placeholder="Artist Img" name="artis_img ">
                     <button class="btn btn-primary" type="submit" name="create">Create</button>
                 </div>
             </form>
@@ -93,6 +94,7 @@ $years = mysqli_query($con, "SELECT * FROM years");
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Image</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -101,6 +103,7 @@ $years = mysqli_query($con, "SELECT * FROM years");
                         <tr>
                             <td><?php echo $artist['id']; ?></td>
                             <td><?php echo $artist['name']; ?></td>
+                            <td><?php echo $artist['artist_img']; ?></td>
                             <td>
                                <form method="POST" style="display:inline;">
                                     <input type="hidden" name="entity" value="artist">
