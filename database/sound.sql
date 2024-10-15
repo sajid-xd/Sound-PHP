@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2024 at 09:14 PM
+-- Generation Time: Oct 15, 2024 at 04:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,15 +70,25 @@ INSERT INTO `artist` (`id`, `name`, `artist_img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `most_listening`
+-- Table structure for table `most_lis`
 --
 
-CREATE TABLE `most_listening` (
+CREATE TABLE `most_lis` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `mostlis_img` text DEFAULT NULL,
-  `lis_music` text DEFAULT NULL
+  `song_name` varchar(50) DEFAULT NULL,
+  `song_img` text DEFAULT NULL,
+  `song` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `most_lis`
+--
+
+INSERT INTO `most_lis` (`id`, `song_name`, `song_img`, `song`) VALUES
+(1, 'Bematlab', '1.jpeg', '1.mp3'),
+(2, 'Jurmana', '2.jpeg', '1.mp3'),
+(3, 'Yaad', '3.jpeg', '1.mp3'),
+(4, 'Aadat', '4.jpeg', '1.mp3');
 
 -- --------------------------------------------------------
 
@@ -103,6 +113,29 @@ CREATE TABLE `music` (
 
 INSERT INTO `music` (`id`, `name`, `YEAR`, `ARTIST`, `ALBUM`, `isaudio`, `icon`, `soucre`) VALUES
 (1, '1.mp3', 2020, 1, 1, 1, 'aadat.jpg', '1.mp3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trending_song`
+--
+
+CREATE TABLE `trending_song` (
+  `id` int(11) NOT NULL,
+  `song_name` varchar(50) DEFAULT NULL,
+  `song_img` text DEFAULT NULL,
+  `song` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `trending_song`
+--
+
+INSERT INTO `trending_song` (`id`, `song_name`, `song_img`, `song`) VALUES
+(1, 'Kahani Suno', '1.jpeg', 'Aadat_By_Atif Aslam.mp3'),
+(2, 'Pasoori', '2.jpeg', 'Aadat_By_Atif Aslam.mp3'),
+(3, 'Jhol', '3.jpeg', 'Aadat_By_Atif Aslam.mp3'),
+(4, 'Therapy', '4.jpeg', 'Aadat_By_Atif Aslam.mp3');
 
 -- --------------------------------------------------------
 
@@ -186,15 +219,21 @@ ALTER TABLE `artist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `most_listening`
+-- Indexes for table `most_lis`
 --
-ALTER TABLE `most_listening`
+ALTER TABLE `most_lis`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `music`
 --
 ALTER TABLE `music`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `trending_song`
+--
+ALTER TABLE `trending_song`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -233,16 +272,22 @@ ALTER TABLE `artist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `most_listening`
+-- AUTO_INCREMENT for table `most_lis`
 --
-ALTER TABLE `most_listening`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `most_lis`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `trending_song`
+--
+ALTER TABLE `trending_song`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
