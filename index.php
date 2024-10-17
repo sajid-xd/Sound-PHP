@@ -39,6 +39,7 @@
          <div class="col-lg-12">
             <div class="section-title">
                <h2>Trading Artist</h2>
+               <h1>Sound</h1>
             </div>
          </div>
       </div>
@@ -79,7 +80,7 @@
    <div class="col-lg-12">
    <div class="section-title" style="text-align: center;">
       <h2>Most Listening</h2>
-      <h1>Relaxing</h1>
+      <h1>Sound</h1>
    </div>
    <div class="row mt-5">
    <?php 
