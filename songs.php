@@ -7,6 +7,69 @@ $songs = 'class="active"';
 <?php include "nav.php"; ?>
 </br></br></br></br></br>
 
+<style>
+:root {
+  --primary-color: #227093;
+  --size: 48px;
+}
+
+.main-body { /* Changed body to .main-body */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #f7f1e3;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+}
+
+legend {
+    padding-inline: 0.5rem;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/* Hide label */
+label {
+  width: 0;
+  overflow: hidden;
+}
+
+/* You can style inputs directly thanks to appearance:none! */
+input {
+  appearance: none;
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  cursor: pointer;
+}
+
+input::after {
+  content: "☆";
+  font-size: calc(var(--size) * 3 / 4);
+  line-height: var(--size);
+  color: #ffc161;
+}
+
+input:is(:checked, :hover)::after,
+input:has(~ input:is(:checked, :hover))::after {
+  content: "★";
+}
+
+input:hover ~ input::after {
+  content: "☆";
+}
+
+/* Styling for the rating div */
+.rating {
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+</style>
+
 <!-- Breadcrumb Begin -->
 <div class="breadcrumb-option">
     <div class="container">
@@ -121,6 +184,23 @@ $songs = 'class="active"';
                                     <p>Album: <?php echo $song['album_name']; ?></p>
                                     <p>Artist: <?php echo $song['artist_name']; ?></p>
                                     <?php echo $playerHTML; ?>
+                                    <div class="rating"> <!-- Added a rating div -->
+                        <form>
+                           <fieldset>
+                              <legend>Rating:</legend>
+                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-1-<?php echo $data['id']; ?>" value="1">
+                              <label for="rating-1-<?php echo $data['id']; ?>">1 Star</label>
+                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-2-<?php echo $data['id']; ?>" value="2">
+                              <label for="rating-2-<?php echo $data['id']; ?>">2 Stars</label>
+                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-3-<?php echo $data['id']; ?>" value="3">
+                              <label for="rating-3-<?php echo $data['id']; ?>">3 Stars</label>
+                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-4-<?php echo $data['id']; ?>" value="4">
+                              <label for="rating-4-<?php echo $data['id']; ?>">4 Stars</label>
+                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-5-<?php echo $data['id']; ?>" value="5">
+                              <label for="rating-5-<?php echo $data['id']; ?>">5 Stars</label>
+                           </fieldset>
+                        </form>
+                     </div>
                                 </div>
                             </div>
                         </div>
