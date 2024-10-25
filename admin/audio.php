@@ -1,5 +1,5 @@
 <?php
-   include "nav.php"; // Navigation
+   include "nav.php";
    
    // Handle file upload
    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['music_file'], $_FILES['image_file'])) {

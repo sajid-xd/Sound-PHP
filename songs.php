@@ -10,7 +10,7 @@
    --primary-color: #227093;
    --size: 48px;
    }
-   .main-body { /* Changed body to .main-body */
+   .main-body {
    display: grid;
    place-items: center;
    min-height: 100vh;
@@ -30,7 +30,6 @@
    width: 0;
    overflow: hidden;
    }
-   /* You can style inputs directly thanks to appearance:none! */
    input {
    appearance: none;
    width: var(--size);
@@ -51,7 +50,6 @@
    input:hover ~ input::after {
    content: "☆";
    }
-   /* Styling for the rating div */
    .rating {
    margin-top: 10px;
    padding: 10px;
@@ -72,6 +70,7 @@
    </div>
 </div>
 <!-- Breadcrumb End -->
+
 <!-- Search Bar Begin -->
 <div class="container mt-2">
    <form method="GET" action="" style="width: 50%; margin: 0 auto;">
@@ -84,6 +83,7 @@
    </form>
 </div>
 <!-- Search Bar End -->
+ 
 <!-- Discography Section Begin -->
 <section class="discography spad">
    <div class="container">
