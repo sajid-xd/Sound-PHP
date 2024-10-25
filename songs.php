@@ -91,7 +91,7 @@
          <div class="col-lg-12">
             <div class="section-title center-title">
                <h2>Latest Releases</h2>
-               <h1>Discography</h1>
+               <h1>Sound</h1>
             </div>
          </div>
       </div>
