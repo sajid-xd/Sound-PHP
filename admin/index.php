@@ -14,14 +14,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
 
     if (isset($_POST['create'])) {
-        // Create new record
-        $sql = "INSERT INTO $entity (name) VALUES ('$name')";
-        if (mysqli_query($con, $sql)) {
-            $message = "New record created successfully.";
+        $targetDir = "uploads/";
+        $imageName = basename($_FILES["artist_img"]["name"]);
+        $targetFilePath = $targetDir . $imageName;
+    
+        // Check if the file was uploaded
+        if (move_uploaded_file($_FILES["artist_img"]["tmp_name"], $targetFilePath)) {
+            // Insert record with image
+            $sql = "INSERT INTO $entity (name, artist_img) VALUES ('$name', '$imageName')";
+            if (mysqli_query($con, $sql)) {
+                $message = "New record created successfully with image.";
+            } else {
+                $message = "Error: " . mysqli_error($con);
+            }
         } else {
-            $message = "Error: " . mysqli_error($con);
+            $message = "Error uploading image.";
         }
-    } elseif (isset($_POST['update'])) {
+    }
+     elseif (isset($_POST['update'])) {
         // Update existing record
         $sql = "UPDATE $entity SET name='$name' WHERE id=$id";
         if (mysqli_query($con, $sql)) {
@@ -70,25 +80,26 @@ $years = mysqli_query($con, "SELECT * FROM years");
             <a href="#albums" data-bs-toggle="tab" aria-expanded="true" class="nav-link">Albums</a>
         </li>
         <li class="nav-item">
-            <a href="#users" data-bs-toggle="tab" aria-expanded="true" class="nav-link">Users</a>
+            <a href="#years" data-bs-toggle="tab" aria-expanded="true" class="nav-link">Years</a>
         </li>
         <li class="nav-item">
-            <a href="#years" data-bs-toggle="tab" aria-expanded="true" class="nav-link">Years</a>
+            <a href="#users" data-bs-toggle="tab" aria-expanded="true" class="nav-link">Users</a>
         </li>
     </ul>
 
     <div class="tab-content">
         <div class="tab-pane show active" id="artists">
             <h5>Artists</h5>
-            <form method="POST" class="mb-3">
-                <input type="hidden" name="entity" value="artist">
-                <input type="hidden" name="id" id="artist_id" value="0">
-                <div class="input-group mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Artist Name" required>
-                    <input type="text" class="form-control" onclick="this.type='file'" placeholder="Artist Img" name="artis_img ">
-                    <button class="btn btn-primary" type="submit" name="create">Create</button>
-                </div>
-            </form>
+           <form method="POST" enctype="multipart/form-data" class="mb-3">
+    <input type="hidden" name="entity" value="artist">
+    <input type="hidden" name="id" id="artist_id" value="0">
+    <div class="input-group mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Artist Name" required>
+        <input type="file" name="artist_img" class="form-control" accept="image/*" required>
+        <button class="btn btn-primary" type="submit" name="create">Create</button>
+    </div>
+</form>
+
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -99,21 +110,28 @@ $years = mysqli_query($con, "SELECT * FROM years");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($artist = mysqli_fetch_assoc($artists)): ?>
-                        <tr>
-                            <td><?php echo $artist['id']; ?></td>
-                            <td><?php echo $artist['name']; ?></td>
-                            <td><?php echo $artist['artist_img']; ?></td>
-                            <td>
-                               <form method="POST" style="display:inline;">
-                                    <input type="hidden" name="entity" value="artist">
-                                    <input type="hidden" name="id" value="<?php echo $artist['id']; ?>">
-                                    <button type="submit" class="btn btn-danger" name="delete">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    <?php endwhile; ?>
-                </tbody>
+    <?php while ($artist = mysqli_fetch_assoc($artists)): ?>
+        <tr>
+            <td><?php echo $artist['id']; ?></td>
+            <td><?php echo $artist['name']; ?></td>
+            <td>
+                <?php if (!empty($artist['artist_img'])): ?>
+                    <img src="uploads/<?php echo $artist['artist_img']; ?>" alt="Artist Image" style="width: 50px; height: auto;">
+                <?php else: ?>
+                    No Image
+                <?php endif; ?>
+            </td>
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="entity" value="artist">
+                    <input type="hidden" name="id" value="<?php echo $artist['id']; ?>">
+                    <button type="submit" class="btn btn-danger" name="delete">Delete</button>
+                </form>
+            </td>
+        </tr>
+    <?php endwhile; ?>
+</tbody>
+
             </table>
         </div>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2024 at 07:10 AM
+-- Generation Time: Oct 25, 2024 at 12:18 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -106,24 +106,6 @@ CREATE TABLE `music` (
   `icon` text NOT NULL,
   `soucre` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `music`
---
-
-INSERT INTO `music` (`id`, `name`, `YEAR`, `ARTIST`, `ALBUM`, `isaudio`, `icon`, `soucre`) VALUES
-(1, 'test.mp3', 2020, 1, 1, 1, 'atirf1.jpeg', 'test.mp3'),
-(2, 'test.mp3', 2021, 3, 2, 1, '3.jpeg', 'test.mp3'),
-(4, '1.mp3', 2024, 2, 5, 1, '1.jpeg', '1.mp3'),
-(5, '1.mp3', 2022, 1, 3, 1, '3.jpeg', '1.mp3'),
-(6, '1.mp3', 2023, 3, 6, 1, '2.jpeg', '1.mp3'),
-(7, '1.mp3', 2022, 4, 6, 1, '4.jpeg', '1.mp3'),
-(8, 'test.mp3', 2020, 1, 1, 0, 'atirf1.jpeg', 'test.mp3'),
-(9, 'Rolling_in_the_Deep.mp3', 2021, 3, 2, 0, '3.jpeg', 'test.mp3'),
-(11, 'Shape_of_You.mp3', 2024, 2, 5, 0, '1.jpeg', 'test.mp3'),
-(12, 'Blinding_Lights.mp3', 2022, 1, 3, 0, '3.jpeg', 'test.mp3'),
-(13, 'Levitating.mp3', 2023, 3, 6, 0, '2.jpeg', 'test.mp3'),
-(14, 'Someone_You_Loved.mp3', 2022, 4, 6, 0, '4.jpeg', 'test.mp3');
 
 -- --------------------------------------------------------
 
@@ -280,7 +262,7 @@ ALTER TABLE `albums`
 -- AUTO_INCREMENT for table `artist`
 --
 ALTER TABLE `artist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `most_lis`
@@ -292,7 +274,7 @@ ALTER TABLE `most_lis`
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `trending_song`
