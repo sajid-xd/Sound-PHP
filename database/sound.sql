@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2024 at 12:32 PM
+-- Generation Time: Oct 25, 2024 at 12:51 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -106,6 +106,21 @@ CREATE TABLE `music` (
   `icon` text NOT NULL,
   `soucre` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `music`
+--
+
+INSERT INTO `music` (`id`, `name`, `YEAR`, `ARTIST`, `ALBUM`, `isaudio`, `icon`, `soucre`) VALUES
+(1, 'test.mp3', 2020, 1, 1, 1, '1.jpeg', 'test.mp3'),
+(2, 'test.mp3', 2021, 2, 3, 1, '2.jpeg', 'test.mp3'),
+(3, 'test.mp3', 2022, 3, 2, 1, '3.jpeg', 'test.mp3'),
+(4, 'test.mp3', 2024, 4, 5, 1, '3.jpeg', 'test.mp3'),
+(5, '1.mp3', 2022, 5, 4, 1, '1.jpeg', '1.mp3'),
+(6, '1.mp3', 2022, 2, 6, 1, '4.jpeg', '1.mp3'),
+(7, '1.mp3', 2022, 5, 4, 1, '2.jpeg', '1.mp3'),
+(8, 'Aadat_By_Atif Aslam.mp3', 2023, 3, 1, 1, '3.jpeg', 'Aadat_By_Atif Aslam.mp3'),
+(9, 'Aadat_By_Atif Aslam.mp3', 2023, 4, 6, 1, '4.jpeg', 'Aadat_By_Atif Aslam.mp3');
 
 -- --------------------------------------------------------
 
@@ -274,7 +289,7 @@ ALTER TABLE `most_lis`
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `trending_song`
