@@ -1,9 +1,10 @@
 <?php
    $home = '';
    $songs = 'class="active"';
-   
-   ?>
+?>
+
 <?php include "nav.php"; ?>
+
 </br></br></br></br></br>
 <style>
    :root {

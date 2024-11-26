@@ -1,11 +1,8 @@
 <?php
    $home = 'class="active"';
-   
-   
    $songs = '';
-   
-   
-   ?>
+?>
+
 <?php include "nav.php"; ?>
 
 
@@ -187,9 +184,9 @@ input:hover ~ input::after {
                   </div>
                </div>
             </div>
-            <?php
-                  }
-                  ?>
+
+            <?php } ?>
+
             </div>
          </div>
       </div>
@@ -248,9 +245,7 @@ input:hover ~ input::after {
                </div>
             </div>
          </div>
-         <?php
-            }
-            ?>
+         <?php } ?>
       </div>
    </div>
 </section>
