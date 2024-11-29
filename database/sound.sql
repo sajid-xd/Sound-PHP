@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2024 at 07:10 AM
+-- Generation Time: Nov 29, 2024 at 08:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,12 +37,9 @@ CREATE TABLE `albums` (
 --
 
 INSERT INTO `albums` (`id`, `name`) VALUES
-(1, 'Best Of Atif Aslam'),
-(2, 'Open Letter - Talha Anjum'),
-(3, 'Asim Azhar Music'),
-(4, 'Rockstar Without A Guitar - UMAIR'),
-(5, 'Mix - AP Dhillon'),
-(6, 'Best Of Arijit Singh');
+(1, 'Pop'),
+(2, 'Classic'),
+(3, 'Unplugged');
 
 -- --------------------------------------------------------
 
@@ -85,10 +82,10 @@ CREATE TABLE `most_lis` (
 --
 
 INSERT INTO `most_lis` (`id`, `song_name`, `song_img`, `song`) VALUES
-(1, 'Bematlab', '1.jpeg', '1.mp3'),
-(2, 'Jurmana', '2.jpeg', '1.mp3'),
-(3, 'Yaad', '3.jpeg', '1.mp3'),
-(4, 'Aadat', '4.jpeg', '1.mp3');
+(1, 'Bematlab', '1.jpeg', 'bematlab.mp3'),
+(2, 'Jurmana', '2.jpeg', 'jurmana.mp3'),
+(3, 'Yaad', '3.jpeg', 'yaad.mp3'),
+(4, 'Aadat', '4.jpeg', 'aadat.mp3');
 
 -- --------------------------------------------------------
 
@@ -112,18 +109,21 @@ CREATE TABLE `music` (
 --
 
 INSERT INTO `music` (`id`, `name`, `YEAR`, `ARTIST`, `ALBUM`, `isaudio`, `icon`, `soucre`) VALUES
-(1, 'test.mp3', 2020, 1, 1, 1, 'atirf1.jpeg', 'test.mp3'),
-(2, 'test.mp3', 2021, 3, 2, 1, '3.jpeg', 'test.mp3'),
-(4, '1.mp3', 2024, 2, 5, 1, '1.jpeg', '1.mp3'),
-(5, '1.mp3', 2022, 1, 3, 1, '3.jpeg', '1.mp3'),
-(6, '1.mp3', 2023, 3, 6, 1, '2.jpeg', '1.mp3'),
-(7, '1.mp3', 2022, 4, 6, 1, '4.jpeg', '1.mp3'),
-(8, 'test.mp3', 2020, 1, 1, 0, 'atirf1.jpeg', 'test.mp3'),
-(9, 'Rolling_in_the_Deep.mp3', 2021, 3, 2, 0, '3.jpeg', 'test.mp3'),
-(11, 'Shape_of_You.mp3', 2024, 2, 5, 0, '1.jpeg', 'test.mp3'),
-(12, 'Blinding_Lights.mp3', 2022, 1, 3, 0, '3.jpeg', 'test.mp3'),
-(13, 'Levitating.mp3', 2023, 3, 6, 0, '2.jpeg', 'test.mp3'),
-(14, 'Someone_You_Loved.mp3', 2022, 4, 6, 0, '4.jpeg', 'test.mp3');
+(1, 'talha1.mp3', 2022, 3, 2, 1, 'talha1.jpg', 'talha1.mp3'),
+(2, 'talha2.mp3', 2023, 3, 1, 1, 'talha2.jpg', 'talha2.mp3'),
+(3, 'talha3.mp3', 2024, 3, 3, 1, 'talha3.jpg', 'talha3.mp3'),
+(4, 'yunas1.mp3', 2022, 5, 1, 1, 'yunas1.jpg', 'yunas1.mp3'),
+(5, 'yunas2.mp3', 2023, 5, 2, 1, 'yunas2.jpg', 'yunas2.mp3'),
+(6, 'yunas3.mp3', 2024, 5, 3, 1, 'yunas3.jpg', 'yunas3.mp3'),
+(7, 'asim1.mp3', 2022, 2, 1, 1, 'asim.jpg', 'asim1.mp3'),
+(8, 'asim2.mp3', 2023, 2, 2, 1, 'asim2.jpg', 'asim2.mp3'),
+(9, 'asim3.mp3', 2024, 2, 3, 1, 'asim3.jpg', 'asim3.mp3'),
+(10, 'kafi1.mp3', 2022, 4, 1, 1, 'kafi1.jpg', 'kafi1.mp3'),
+(11, 'kafi2.mp3', 2023, 4, 2, 1, 'kafi2.jpg', 'kafi2.mp3'),
+(13, 'atif1.mp3', 2022, 1, 1, 1, 'atif1.jpg', 'atif1.mp3'),
+(14, 'atif2.mp3', 2023, 1, 2, 1, 'atif2.jpg', 'atif2.mp3'),
+(15, 'atif3.mp3', 2024, 1, 3, 1, 'atif3.jpg', 'atif3.mp3'),
+(16, 'kafi3.mp3', 2024, 4, 3, 1, 'kafi3.jpg', 'kafi3.mp3');
 
 -- --------------------------------------------------------
 
@@ -143,10 +143,10 @@ CREATE TABLE `trending_song` (
 --
 
 INSERT INTO `trending_song` (`id`, `song_name`, `song_img`, `song`) VALUES
-(1, 'Kahani Suno', '1.jpeg', 'Aadat_By_Atif Aslam.mp3'),
-(2, 'Pasoori', '2.jpeg', 'Aadat_By_Atif Aslam.mp3'),
-(3, 'Jhol', '3.jpeg', 'Aadat_By_Atif Aslam.mp3'),
-(4, 'Therapy', '4.jpeg', 'Aadat_By_Atif Aslam.mp3');
+(1, 'Kahani Suno', '1.jpeg', 'Kahani Suno.mp3'),
+(2, 'Pasoori', '2.jpeg', 'Pasoori.mp3'),
+(3, 'Jhol', '3.jpeg', 'Jhol.mp3'),
+(4, 'Therapy', '4.jpeg', 'Therapy.mp3');
 
 -- --------------------------------------------------------
 
@@ -168,8 +168,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `usertype`, `password`) VALUES
 (1, 'Sajid', 'admin', 1, 'admin'),
-(2, 'asdf', 'asf', 2, 'ascf'),
-(3, 'faws', 'asc', 2, 'wdxasc'),
 (4, 'test', 'test', 2, 'test');
 
 -- --------------------------------------------------------
@@ -207,8 +205,6 @@ CREATE TABLE `years` (
 --
 
 INSERT INTO `years` (`id`, `name`) VALUES
-(2020, '2020'),
-(2021, '2021'),
 (2022, '2022'),
 (2023, '2023'),
 (2024, '2024');
@@ -274,13 +270,13 @@ ALTER TABLE `years`
 -- AUTO_INCREMENT for table `albums`
 --
 ALTER TABLE `albums`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `artist`
 --
 ALTER TABLE `artist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `most_lis`
@@ -292,7 +288,7 @@ ALTER TABLE `most_lis`
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `trending_song`
@@ -316,7 +312,7 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT for table `years`
 --
 ALTER TABLE `years`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2026;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2027;
 
 --
 -- Constraints for dumped tables
