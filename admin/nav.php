@@ -79,21 +79,12 @@ if($_SESSION['usertype']!="1"){
 
              
                         <li class="side-nav-item">
-                            <a  class="side-nav-link" href="audio.php">
+                            <a  class="side-nav-link" href="songs.php">
                                 <i class="uil-music"></i>
-                                <span> Audio Songs </span>
+                                <span> Songs </span>
                             </a>
                            
                         </li>
-
-                        <li class="side-nav-item">
-                            <a  class="side-nav-link" href="video.php">
-                                <i class="uil uil-clapper-board"></i>
-                                <span> Video Songs </span>
-                            </a>
-                           
-                        </li>
-
 
 
                 </div>
