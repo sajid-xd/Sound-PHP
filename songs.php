@@ -135,6 +135,11 @@ input:hover ~ input::after {
             $filterCondition .= ($filterCondition == "") ? " WHERE m.ALBUM = $albumId" : " AND m.ALBUM = $albumId";
         }
 
+        if (isset($_GET['year_id'])) {
+            $yearId = intval($_GET['year_id']); // Corrected variable name
+            $filterCondition .= ($filterCondition == "") ? " WHERE m.YEAR = $yearId" : " AND m.YEAR = $yearId";
+        }
+
         $songsQuery = "SELECT m.id, m.name AS song_name, m.icon, m.soucre, m.isaudio, a.name AS album_name, ar.name AS artist_name, m.YEAR
                        FROM music m
                        JOIN albums a ON m.ALBUM = a.id
@@ -195,17 +200,11 @@ input:hover ~ input::after {
         <?php
             }
         } else {
-            // Check if the search term is numeric to display "Year not found"
-            if (isset($_GET['search']) && is_numeric($_GET['search'])) {
-                echo "<p>Songs not found.</p>";
-            } else {
-                echo "<p>No songs found.</p>";
-            }
+            echo "<p>No songs found for the selected criteria.</p>";
         }
         ?>
     </div>
 </div>
-
 
         <?php
         mysqli_close($con);
