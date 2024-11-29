@@ -13,7 +13,7 @@ $songs = 'class="active"';
   --size: 48px;
 }
 
-.main-body { /* Changed body to .main-body */
+.main-body {
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -31,13 +31,11 @@ legend {
     border-bottom: 2px solid #000000;
 }
 
-/* Hide label */
 label {
   width: 0;
   overflow: hidden;
 }
 
-/* You can style inputs directly thanks to appearance:none! */
 input {
   appearance: none;
   width: var(--size);
@@ -62,15 +60,14 @@ input:hover ~ input::after {
   content: "☆";
 }
 
-/* Styling for the rating div */
 .rating {
     margin-top: 10px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 </style>
 
-<!-- Breadcrumb Begin -->
 <div class="breadcrumb-option">
     <div class="container">
         <div class="row">
@@ -83,9 +80,7 @@ input:hover ~ input::after {
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
 
-<!-- Search Bar Begin -->
 <div class="container mt-2">
     <form method="GET" action="" style="width: 50%; margin: 0 auto;">
         <div class="input-group mb-3">
@@ -97,9 +92,6 @@ input:hover ~ input::after {
     </form>
 </div>
 
-<!-- Search Bar End -->
-
-<!-- Discography Section Begin -->
 <section class="discography spad">
     <div class="container">
         <div class="row">
@@ -115,7 +107,6 @@ input:hover ~ input::after {
         // CONNECTION...
         $con = mysqli_connect("localhost", "root", "", "sound");
 
-        // Check connection
         if (!$con) {
             die("Connection failed: " . mysqli_connect_error());
         }
@@ -125,13 +116,13 @@ input:hover ~ input::after {
         // Add the search condition
         if (isset($_GET['search'])) {
             $search = mysqli_real_escape_string($con, $_GET['search']);
-            $filterCondition .= " WHERE m.name LIKE '%$search%' OR ar.name LIKE '%$search%' OR a.name LIKE '%$search%'";
-        }
-
-        // Existing filters (year, artist, album)
-        if (isset($_GET['year_id'])) {
-            $yearId = intval($_GET['year_id']);
-            $filterCondition .= ($filterCondition == "") ? " WHERE m.YEAR = $yearId" : " AND m.YEAR = $yearId";
+            if (is_numeric($search)) {
+                // If the search term is a number, treat it as a year
+                $filterCondition .= " WHERE m.YEAR = $search";
+            } else {
+                // If not a number, search across song, artist, and album names
+                $filterCondition .= " WHERE m.name LIKE '%$search%' OR ar.name LIKE '%$search%' OR a.name LIKE '%$search%'";
+            }
         }
 
         if (isset($_GET['artist_id'])) {
@@ -144,7 +135,6 @@ input:hover ~ input::after {
             $filterCondition .= ($filterCondition == "") ? " WHERE m.ALBUM = $albumId" : " AND m.ALBUM = $albumId";
         }
 
-        // Query to get songs based on filters
         $songsQuery = "SELECT m.id, m.name AS song_name, m.icon, m.soucre, m.isaudio, a.name AS album_name, ar.name AS artist_name, m.YEAR
                        FROM music m
                        JOIN albums a ON m.ALBUM = a.id
@@ -154,71 +144,73 @@ input:hover ~ input::after {
         $songCount = mysqli_num_rows($songsResult);
         ?>
 
-        <div class="container">
-            <h2>Total Songs: <?php echo $songCount; ?></h2>
+<div class="container">
+    <h2>Total Songs: <?php echo $songCount; ?></h2>
 
-            <div class="row">
-                <?php
-                if ($songCount > 0) {
-                    while ($song = mysqli_fetch_assoc($songsResult)) {
-                        if ($song['isaudio'] == 1) {
-                            $playerHTML = '<audio controls>
-                                            <source src="admin/uploads/' . $song['soucre'] . '" type="audio/mpeg">
-                                            Your browser does not support the audio element.
-                                          </audio>';
-                        } else {
-                            $playerHTML = '<video controls width="250">
-                                            <source src="admin/uploads/' . $song['soucre'] . '" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                          </video>';
-                        }
-                ?>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="discography__item">
-                                <div class="discography__item__pic">
-                                    <img src="admin/uploads/images/<?php echo $song['icon']; ?>" alt="">
-                                </div>
-                                <div class="discography__item__text">
-                                    <span><?php echo $song['song_name']; ?></span>
-                                    <h4><?php echo $song['YEAR']; ?></h4>
-                                    <p>Album: <?php echo $song['album_name']; ?></p>
-                                    <p>Artist: <?php echo $song['artist_name']; ?></p>
-                                    <?php echo $playerHTML; ?>
-                                    <div class="rating"> <!-- Added a rating div -->
-                        <form>
-                           <fieldset>
-                              <legend>Rating:</legend>
-                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-1-<?php echo $data['id']; ?>" value="1">
-                              <label for="rating-1-<?php echo $data['id']; ?>">1 Star</label>
-                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-2-<?php echo $data['id']; ?>" value="2">
-                              <label for="rating-2-<?php echo $data['id']; ?>">2 Stars</label>
-                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-3-<?php echo $data['id']; ?>" value="3">
-                              <label for="rating-3-<?php echo $data['id']; ?>">3 Stars</label>
-                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-4-<?php echo $data['id']; ?>" value="4">
-                              <label for="rating-4-<?php echo $data['id']; ?>">4 Stars</label>
-                              <input type="radio" name="rating-<?php echo $data['id']; ?>" id="rating-5-<?php echo $data['id']; ?>" value="5">
-                              <label for="rating-5-<?php echo $data['id']; ?>">5 Stars</label>
-                           </fieldset>
-                        </form>
-                     </div>
-                                </div>
+    <div class="row">
+        <?php
+        if ($songCount > 0) {
+            while ($song = mysqli_fetch_assoc($songsResult)) {
+                $playerHTML = $song['isaudio'] == 1
+                    ? '<audio controls>
+                        <source src="admin/uploads/' . $song['soucre'] . '" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>'
+                    : '<video controls width="250">
+                        <source src="admin/uploads/' . $song['soucre'] . '" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>';
+        ?>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="discography__item">
+                        <div class="discography__item__pic">
+                            <img src="admin/uploads/images/<?php echo $song['icon']; ?>" alt="">
+                        </div>
+                        <div class="discography__item__text">
+                            <span><?php echo $song['song_name']; ?></span>
+                            <h4><?php echo $song['YEAR']; ?></h4>
+                            <p>Album: <?php echo $song['album_name']; ?></p>
+                            <p>Artist: <?php echo $song['artist_name']; ?></p>
+                            <?php echo $playerHTML; ?>
+                            <div class="rating">
+                                <form>
+                                    <fieldset>
+                                        <legend>Rating:</legend>
+                                        <input type="radio" name="rating-<?php echo $song['id']; ?>" id="rating-1-<?php echo $song['id']; ?>" value="1">
+                                        <label for="rating-1-<?php echo $song['id']; ?>">1 Star</label>
+                                        <input type="radio" name="rating-<?php echo $song['id']; ?>" id="rating-2-<?php echo $song['id']; ?>" value="2">
+                                        <label for="rating-2-<?php echo $song['id']; ?>">2 Stars</label>
+                                        <input type="radio" name="rating-<?php echo $song['id']; ?>" id="rating-3-<?php echo $song['id']; ?>" value="3">
+                                        <label for="rating-3-<?php echo $song['id']; ?>">3 Stars</label>
+                                        <input type="radio" name="rating-<?php echo $song['id']; ?>" id="rating-4-<?php echo $song['id']; ?>" value="4">
+                                        <label for="rating-4-<?php echo $song['id']; ?>">4 Stars</label>
+                                        <input type="radio" name="rating-<?php echo $song['id']; ?>" id="rating-5-<?php echo $song['id']; ?>" value="5">
+                                        <label for="rating-5-<?php echo $song['id']; ?>">5 Stars</label>
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
-                <?php
-                    }
-                } else {
-                    echo "<p>No songs found.</p>";
-                }
-                ?>
-            </div>
-        </div>
+                    </div>
+                </div>
+        <?php
+            }
+        } else {
+            // Check if the search term is numeric to display "Year not found"
+            if (isset($_GET['search']) && is_numeric($_GET['search'])) {
+                echo "<p>Songs not found.</p>";
+            } else {
+                echo "<p>No songs found.</p>";
+            }
+        }
+        ?>
+    </div>
+</div>
+
 
         <?php
         mysqli_close($con);
         ?>
-
     </div>
 </section>
-
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php include "foot.php"; ?>
